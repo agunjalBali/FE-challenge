@@ -1,0 +1,107 @@
+import { Card, CardStatus } from 'src/models/card';
+import {
+  Transaction,
+  TransactionClass,
+  TransactionType,
+} from 'src/models/transaction';
+
+export const cards: Card[] = [
+  {
+    id: 1,
+    cardHolder: 'Elon Musk',
+    cardNumber: '9876 5432 1098 7654',
+    cvv: '321',
+    expiryDate: '12/27',
+    status: CardStatus.Active,
+  },
+  {
+    id: 2,
+    cardHolder: 'Sam Bankman-Fried',
+    cardNumber: '7777 8888 9999 0000',
+    cvv: '789',
+    expiryDate: '09/26',
+    status: CardStatus.Inactive,
+  },
+  {
+    id: 3,
+    cardHolder: 'Jeff Bezoz',
+    cardNumber: '1111 2222 3333 4444',
+    cvv: '456',
+    expiryDate: '06/25',
+    status: CardStatus.Active,
+  },
+
+];
+
+export const transactions: Transaction[] = [
+  {
+    id: 1,
+    amount: 123,
+    recipientName: 'SpaceX',
+    currency: 'S$',
+    type: TransactionType.Charged,
+    transactionTime: new Date(2023, 1, 1),
+    category: TransactionClass.regular,
+    cardId: 1,
+  },
+  {
+    id: 2,
+    amount: 2100,
+    recipientName: 'Secret Spy Agency',
+    currency: 'S$',
+    type: TransactionType.Refund,
+    transactionTime: new Date(2023, 2, 2),
+    category: TransactionClass.important,
+    cardId: 1,
+  },
+  {
+    id: 3,
+    amount: 1234,
+    recipientName: 'Alien Souvenirs Inc.',
+    currency: 'S$',
+    type: TransactionType.Charged,
+    transactionTime: new Date(2023, 3, 3),
+    category: TransactionClass.seasonal,
+    cardId: 1,
+  },
+  {
+    id: 4,
+    amount: 150,
+    recipientName: 'Mars Pizza Delivery',
+    currency: 'S$',
+    type: TransactionType.Charged,
+    transactionTime: new Date(2023, 3, 3),
+    category: TransactionClass.regular,
+    cardId: 1,
+  },
+  {
+    id: 5,
+    amount: 10000,
+    recipientName: 'Moon Luxury Fashion',
+    currency: 'S$',
+    type: TransactionType.Charged,
+    transactionTime: new Date(2023, 3, 3),
+    category: TransactionClass.seasonal,
+    cardId: 2,
+  },
+  {
+    id: 6,
+    amount: 2000,
+    recipientName: 'Blue Origin Travel Agency',
+    currency: 'S$',
+    type: TransactionType.Charged,
+    transactionTime: new Date(2023, 3, 3),
+    category: TransactionClass.regular,
+    cardId: 3,
+  },
+  {
+    id: 7,
+    amount: 3000,
+    recipientName: 'Exoplanet Real Estate Inc.',
+    currency: 'S$',
+    type: TransactionType.Charged,
+    transactionTime: new Date(2023, 3, 3),
+    category: TransactionClass.seasonal,
+    cardId: 3,
+  },
+];
