@@ -27,6 +27,6 @@ export const cancelCard = async (card: Card, currentCards: Card[]) => {
     return Promise.resolve(updatedCards);
 };
 
-export const getTransactionList = async (cardId: number) => {
+export const getTransactionsList = async (cardId: number) => {
     return Promise.resolve(mockTransactions.filter((item) => cardId === item.cardId));
 };

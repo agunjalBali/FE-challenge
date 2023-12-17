@@ -8,4 +8,7 @@
   @apply font-sans;
 }
 
-
+.q-tab__label {
+  text-transform: none !important; /* or 'inherit' */
+  font-size: 20px;
+}

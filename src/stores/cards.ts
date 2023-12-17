@@ -2,7 +2,7 @@ import { defineStore } from 'pinia';
 import { CardStatus, Card } from 'src/models/card';
 import { Transaction } from 'src/models/transaction';
 import {
-  getTransactionList,
+  getTransactionsList,
   addNewCard,
   getCardList,
   changeCardStatus,
@@ -39,8 +39,8 @@ export const useCardStore = defineStore('card', {
       this.cards = cards;
     },
 
-    async getTransactionList(cardId: number) {
-      const transactions = await getTransactionList(cardId);
+    async getTransactionsList(cardId: number) {
+      const transactions = await getTransactionsList(cardId);
       this.transactions = transactions;
     },
   },

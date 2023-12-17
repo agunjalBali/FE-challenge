@@ -24,7 +24,7 @@ export const cards: Card[] = [
   },
   {
     id: 3,
-    cardHolder: 'Jeff Bezoz',
+    cardHolder: 'Jeff Bezos',
     cardNumber: '1111 2222 3333 4444',
     cvv: '456',
     expiryDate: '06/25',
