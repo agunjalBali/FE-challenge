@@ -25,7 +25,9 @@
         <div class="swiper-pagination"></div>
       </div>
     </template>
-    <div class="text-white" v-else>Begin your journey with Aspire, Add New Card</div>
+    <div class="text-white" v-else>
+      Begin your journey with Aspire, Add New Card
+    </div>
   </div>
 </template>
 
@@ -74,8 +76,8 @@ defineExpose({ currentCard });
   .swiper-slide {
     @apply lg:pt-2;
     &:last-child {
-        margin-right: 20px; /* Adjust the value according to your design */
-      }
+      margin-right: 20px; /* Adjust the value according to your design */
+    }
   }
   .swiper-pagination-bullet {
     @apply bg-brand opacity-10 transition-all duration-300;

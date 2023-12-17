@@ -1,7 +1,7 @@
 <template>
   <q-layout class="layout" view="lHh Lpr lFf">
     <q-drawer :width="360" class="layout__drawer" show-if-above bordered>
-      <FullLogo class="layout__drawer__logo"/>
+      <FullLogo class="layout__drawer__logo" />
       <div class="layout__drawer__text">
         Trusted way of banking for 3,000+ SMEs and startups in Singapore
       </div>

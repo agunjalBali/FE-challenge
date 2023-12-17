@@ -11,7 +11,7 @@
 
       <q-card>
         <q-card-section>
-         Very Fancy Card, Your limit is S$ 10,000.
+          Very Fancy Card, Your limit is S$ 10,000.
         </q-card-section>
       </q-card>
     </q-expansion-item>

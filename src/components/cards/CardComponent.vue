@@ -26,9 +26,7 @@
         'card-wrapper__card--active': isActive,
       }"
     >
-      <div v-if="isFrozen" class="card-wrapper__card__overlay">
-        Frozen
-      </div>
+      <div v-if="isFrozen" class="card-wrapper__card__overlay">Frozen</div>
 
       <div class="card-wrapper__card__info">
         <div class="card-wrapper__card__info__logo-wrapper">
@@ -94,7 +92,6 @@ const isFrozen = computed(() => props.card?.status === 'inactive');
       @apply h-full w-full absolute top-0 left-0 text-opacity-100 rounded-xl  flex justify-center items-center;
       @apply text-white #{!important};
       background-color: rgba(43, 34, 34, 0.5);
-
     }
     @apply scale-90 origin-left z-10 relative p-6 mt-5 opacity-50 bg-[#536DFF] transition-all duration-300 w-full rounded-xl text-white font-bold;
 

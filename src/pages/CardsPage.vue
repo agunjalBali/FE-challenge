@@ -3,19 +3,25 @@
   <q-page v-if="!TouchMode" class="cards-page">
     <div class="cards-page__overview">
       <div class="cards-page__overview-title">
-        <span class="cards-page__overview-title-text">
-          Account balance
-        </span>
+        <span class="cards-page__overview-title-text"> Account balance </span>
       </div>
       <div class="cards-page__overview-info">
         <AccountBalanceComponent />
-        <button @click="newCardIsOpened = true" class="cards-page__overview-info-btn">
+        <button
+          @click="newCardIsOpened = true"
+          class="cards-page__overview-info-btn"
+        >
           <PlusCircle class="cards-page__overview-info-btn-icon" />
           <span>New card</span>
         </button>
       </div>
 
-      <q-tabs v-model="tab" inline-label align="left" class="cards-page__overview-tabs">
+      <q-tabs
+        v-model="tab"
+        inline-label
+        align="left"
+        class="cards-page__overview-tabs"
+      >
         <q-tab name="myCards" label="My debit cards" />
         <q-tab disable name="allCards" label="All company cards" />
       </q-tabs>
@@ -23,15 +29,29 @@
       <q-card class="cards-page__overview-card">
         <div class="row">
           <div class="col-6">
-            <q-tab-panels v-model="tab" class="cards-page__overview-tab-panels" animated>
-              <q-tab-panel name="myCards" class="cards-page__overview-tab-panel">
+            <q-tab-panels
+              v-model="tab"
+              class="cards-page__overview-tab-panels"
+              animated
+            >
+              <q-tab-panel
+                name="myCards"
+                class="cards-page__overview-tab-panel"
+              >
                 <CardCarouselComponent ref="CardCarouselRef" />
                 <div v-if="currentCard" class="cards-page__card-detail">
-                  <CardActionsComponent :currentCard="currentCard" @cancelCard="onCancelCard" @freezeCard="onFreezeChange" />
+                  <CardActionsComponent
+                    :currentCard="currentCard"
+                    @cancelCard="onCancelCard"
+                    @freezeCard="onFreezeChange"
+                  />
                 </div>
               </q-tab-panel>
 
-              <q-tab-panel name="allCards" class="cards-page__overview-tab-panel">
+              <q-tab-panel
+                name="allCards"
+                class="cards-page__overview-tab-panel"
+              >
                 <div class="text-h6">All Company Card</div>
               </q-tab-panel>
             </q-tab-panels>
@@ -49,33 +69,56 @@
     <div class="cards-page-mobile__overview">
       <div class="cards-page-mobile__overview-header-wrapper">
         <div class="cards-page-mobile__overview-title">
-          <span class="cards-page-mobile__overview-title-text"> Account balance </span>
+          <span class="cards-page-mobile__overview-title-text">
+            Account balance
+          </span>
           <logo class="cards-page-mobile__overview-title-logo" />
         </div>
         <div class="cards-page-mobile__overview-info">
           <AccountBalanceComponent />
-          <button @click="newCardIsOpened = true" class="cards-page-mobile__overview-info-btn">
+          <button
+            @click="newCardIsOpened = true"
+            class="cards-page-mobile__overview-info-btn"
+          >
             <PlusCircle class="cards-page-mobile__overview-info-btn-icon" />
             <span>New card</span>
           </button>
         </div>
 
-        <q-tabs v-model="tab" inline-label class="cards-page-mobile__overview-tabs">
+        <q-tabs
+          v-model="tab"
+          inline-label
+          class="cards-page-mobile__overview-tabs"
+        >
           <q-tab name="myCards" label="My debit cards" />
           <q-tab disable name="allCards" label="All company cards" />
         </q-tabs>
       </div>
-      <q-tab-panels v-model="tab" class="cards-page-mobile__overview-tab-panels" animated>
-        <q-tab-panel name="myCards" class="cards-page-mobile__overview-tab-panel">
+      <q-tab-panels
+        v-model="tab"
+        class="cards-page-mobile__overview-tab-panels"
+        animated
+      >
+        <q-tab-panel
+          name="myCards"
+          class="cards-page-mobile__overview-tab-panel"
+        >
           <CardCarouselComponent ref="CardCarouselRef" />
         </q-tab-panel>
 
-        <q-tab-panel name="allCards" class="cards-page-mobile__overview-tab-panel">
+        <q-tab-panel
+          name="allCards"
+          class="cards-page-mobile__overview-tab-panel"
+        >
         </q-tab-panel>
       </q-tab-panels>
     </div>
     <div v-if="currentCard" class="cards-page-mobile__card-detail">
-      <CardActionsComponent :currentCard="currentCard" @cancelCard="onCancelCard" @freezeCard="onFreezeChange" />
+      <CardActionsComponent
+        :currentCard="currentCard"
+        @cancelCard="onCancelCard"
+        @freezeCard="onFreezeChange"
+      />
 
       <CardDetailComponent />
     </div>
@@ -115,22 +158,20 @@ const TouchMode = computed(() => {
   return $q.screen.lt.lg;
 });
 const onFreezeChange = () => {
-    if (currentCard.value) {
-      const newStatus =
-        currentCard.value?.status === CardStatus.Active
-          ? CardStatus.Inactive
-          : CardStatus.Active;
+  if (currentCard.value) {
+    const newStatus =
+      currentCard.value?.status === CardStatus.Active
+        ? CardStatus.Inactive
+        : CardStatus.Active;
 
-      changeCardStatus(currentCard.value, newStatus);
-    }
-  };
-
+    changeCardStatus(currentCard.value, newStatus);
+  }
+};
 
 const onCancelCard = () => {
   Dialog.create({
     title: 'Cancel and remove card',
-    message:
-      'Are you sure you want to cancel and remove this card?',
+    message: 'Are you sure you want to cancel and remove this card?',
     ok: {
       label: 'Cancel Card',
       color: 'negative',
@@ -186,7 +227,8 @@ const onCancelCard = () => {
     &-tabs {
       @apply mt-6 capitalize #{!important};
 
-      .q-tab__indicator {}
+      .q-tab__indicator {
+      }
     }
 
     &-tab-panels {
@@ -227,9 +269,9 @@ const onCancelCard = () => {
     padding-left: 1.5rem;
     padding-right: 0;
 
-    &-header-wrapper{
+    &-header-wrapper {
       @apply px-6;
-      padding-left:0;
+      padding-left: 0;
     }
     &-title {
       @apply flex justify-between pt-8;
@@ -258,7 +300,8 @@ const onCancelCard = () => {
     &-tabs {
       @apply scale-75 -translate-x-10 text-white mt-2;
 
-      .q-tab__indicator {}
+      .q-tab__indicator {
+      }
     }
 
     &-tab-panels {
@@ -305,8 +348,7 @@ const onCancelCard = () => {
     }
     .absolute-bottom {
       @apply bg-[#23CEFD];
-      background-color: #23CEFD;
-
+      background-color: #23cefd;
     }
     .q-tab {
       @apply p-0 flex-grow-0 flex-shrink-0 h-6 min-h-[24px] mr-8;
@@ -316,21 +358,18 @@ const onCancelCard = () => {
       &.disabled {
         @apply opacity-30 #{!important};
         text-transform: none !important; /* or 'inherit' */
-
       }
 
       &--active {
         .q-tab__label {
           @apply text-[17px] font-bold;
           text-transform: none !important; /* or 'inherit' */
-
         }
       }
 
       &__label {
         @apply text-[17px] leading-5 pb-1.5;
         text-transform: none; /* or 'inherit' */
-
       }
     }
   }

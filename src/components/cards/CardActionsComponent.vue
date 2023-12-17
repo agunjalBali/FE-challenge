@@ -12,7 +12,11 @@
     </button>
     <button class="card-actions__btn">
       <!-- <SetSpendLimit class="card-actions__icon" /> -->
-      <img src="/src/assets/limit.png" class="card-actions__icon-image" alt="Limit Image">
+      <img
+        src="/src/assets/limit.png"
+        class="card-actions__icon-image"
+        alt="Limit Image"
+      />
 
       <span> Set Spend Limit </span>
     </button>
@@ -46,7 +50,7 @@ defineProps(['currentCard']);
 
 <style lang="scss">
 .card-actions {
-  @apply  text-[#0C365A] text-[13px] flex py-5 px-4 rounded-t-3xl lg:rounded-3xl lg:mt-10;
+  @apply lg:bg-[#EDF3FF] text-[#0C365A] text-[13px] flex py-5 px-4 rounded-t-3xl lg:rounded-3xl lg:mt-5;
 
   &__btn {
     @apply flex-1 flex flex-col justify-start items-center px-1 text-center;

@@ -30,7 +30,6 @@ export const cards: Card[] = [
     expiryDate: '06/25',
     status: CardStatus.Active,
   },
-
 ];
 
 export const transactions: Transaction[] = [
