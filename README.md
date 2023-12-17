@@ -1,9 +1,9 @@
 # fe-challenge
 
 This is My submission for FE challenge, I have tried to focus on keeping the UI-UX Dynamic, Interactive, High fidelity as well as responsive PWA.
-
-
-I started building using Quasar2 cli running on vue3 using typescript along with pinia store and tailwind css.
+## URL
+[Deployed on vercel](https://aspire-rho.vercel.app/)
+Built using Quasar2 cli running on vue3 using typescript, vite, pinia store and tailwind css.
 
 features developed:
 Layout and menu
