@@ -3,6 +3,7 @@
 This is My submission for FE challenge, I have tried to focus on keeping the UI-UX Dynamic, Interactive, High fidelity as well as responsive PWA.
 ## Description
 [Deployed on vercel](https://aspire-rho.vercel.app/)
+
 Built using Quasar2 cli running on vue3 using typescript, vite, pinia store and tailwind css.
 
 features developed:
@@ -56,3 +57,13 @@ quasar build
 ### Customize the configuration
 
 See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+
+
+### References
+
+https://quasar.dev/docs
+https://tailwindcss.com/docs/
+https://blog.albert.do/quasar-mock-vitest/
+https://quasar.dev/quasar-cli-vite/developing-spa/deploying/
+https://testing.quasar.dev/packages/unit-vitest/
+https://github.com/posva/vue-router-mock
