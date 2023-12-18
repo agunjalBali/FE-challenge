@@ -8,13 +8,10 @@ export default defineConfig({
   test: {
     environment: 'happy-dom',
     setupFiles: 'test/vitest/setup-file.ts',
-    coverage: {
-      provider: 'v8', // or 'v8'
-    },
     include: [
       // Matches vitest tests in any subfolder of 'src' or into 'test/vitest/__tests__'
       // Matches all files with extension 'js', 'jsx', 'ts' and 'tsx'
-      'src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}',
+      'src/**/*.vitest.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}',
       'test/vitest/__tests__/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}',
     ],
   },

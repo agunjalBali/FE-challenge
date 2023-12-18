@@ -13,7 +13,8 @@
     "build": "quasar build",
     "coverage": "vitest run --coverage",
     "test:unit": "vitest",
-    "test:unit:ci": "vitest run"
+    "test:unit:ci": "vitest run",
+    "test:unit:ui": "vitest --ui"
   },
   "dependencies": {
     "@pinia/testing": "^0.1.3",
